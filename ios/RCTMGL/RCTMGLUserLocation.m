@@ -5,6 +5,7 @@
 
 #import "RCTMGLUserLocation.h"
 #import <Mapbox/MGLUserLocationAnnotationView.h>
+#import "MGLFaux3DUserLocationAnnotationView.h"
 
 @interface HiddenUserLocationAnnotationView : MGLUserLocationAnnotationView
 
@@ -32,7 +33,7 @@
 
 - (MGLUserLocationAnnotationView*)builtinUserAnnotation
 {
-    return [[HiddenUserLocationAnnotationView alloc] init];
+    return [[MGLFaux3DUserLocationAnnotationView alloc] init];
 }
 
 @end

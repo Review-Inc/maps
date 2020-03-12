@@ -70,6 +70,8 @@
     }
     _map = map;
     _map.reactCamera = self;
+    _map.showsUserLocation = YES;
+    _map.showsUserHeadingIndicator = YES;
 
     [self _setInitialCamera];
     [self _updateMinMaxZoomLevel];
