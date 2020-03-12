@@ -63,7 +63,7 @@ public class RCTMGLCamera extends AbstractMapFeature {
 
     private LocationManager mLocationManager;
     private UserLocation mUserLocation;
-    private boolean mShowUserLocation = false;
+    private boolean mShowUserLocation = true;
 
     private Point mCenterCoordinate;
 
@@ -398,6 +398,7 @@ public class RCTMGLCamera extends AbstractMapFeature {
         }
         int userLayerMode = UserTrackingMode.getMapLayerMode(mUserLocation.getTrackingMode(), mShowUserLocation);
         mLocationComponent.setLocationComponentEnabled(mFollowUserLocation || mShowUserLocation);
+        mLocationComponent.setRenderMode(RenderMode.COMPASS);
 
         if (userLayerMode != -1) {
             mLocationComponent.setRenderMode(userLayerMode);
